@@ -1,0 +1,25 @@
+{% extends 'apps/Base.html' %}
+{% block title %} Alta Alumno{% endblock %}
+{% block vista %}
+<br>
+<br>
+<table border="0" cellspacing=0 cellpadding="0" align="center">
+    <tr>
+        <td>
+<div class="container " align="center">
+                 <div class="card card-cascade wider reverse my-1 bg_r" >
+                     <div class="card-body text-center">
+        <!--Title-->
+       <form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Guardar</button>
+</form>
+    </div>
+ </div>
+</div>
+</td>
+    </tr>
+ </table>
+
+{% endblock %}

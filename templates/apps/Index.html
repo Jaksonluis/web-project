@@ -1,0 +1,40 @@
+{% extends 'apps/Base.html' %}
+{% block title %} BecasTec{% endblock %}
+
+{% block vista %}
+
+
+<table border="0" cellspacing=2 cellpadding="2" align="center">
+    <tr>
+        <td>
+     <div class="card card-cascade wider reverse my-1 bg_r" align="center" >
+
+    <!--Card content-->
+    <div class="card-body text-center" align="center">
+        <!--Title-->
+        <img src="/static/images/Becas" width="200" height="100">
+
+        <form method = "POST">
+		{% csrf_token %}
+            {{ form.as_p }}
+
+
+
+			<button type = "submit" class = "btn btn-primary btn-lg btn-block">Iniciar sesión</button>
+			<button type = "reset" class = "btn btn-warning btn-lg btn-block">Cancelar</button>
+
+		</form>
+    </div>
+    <!--/.Card content-->
+
+</div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+{% endblock %}
